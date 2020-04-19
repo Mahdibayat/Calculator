@@ -1,0 +1,154 @@
+
+body{
+    background-image: linear-gradient(35rad, #9999ff, #6666ff, #4d4dff);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.name{
+    position: relative;
+    top: 20px;
+}
+#main-div{
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    margin: auto;
+    position: relative;
+    top: 20%;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+    padding: 5px;
+}
+.area{
+    text-align: center;
+    padding :20px;
+}
+.area:hover{
+    border: 1px solid silver;
+}
+
+#AC{
+    width: auto;
+    height: auto;
+    background-color: #b30000;
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+#division{
+    width: auto;
+    height: auto;
+    background-color: #737373;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+#x{
+    width: auto;
+    height: auto;
+    background-color: #737373;
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+#seven{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+#eight{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+#nine{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+#mines{
+    width: auto;
+    height: auto;
+    background-color: #737373;
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+#four{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;;
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+#five{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+#six{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+#plus{
+    width: auto;
+    height: auto;
+    background-color: #737373;
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+#one{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+#two{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+#three{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+#equal{
+    width: auto;
+    height: auto;
+    background-color: #004d99;
+    grid-column: 4/5;
+    grid-row: 5/7;
+}
+#zero{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 1/3;
+    grid-row: 6/7;
+}
+#dot{
+    width: auto;
+    height: auto;
+    background-color: #4d4d4d;
+    grid-column: 3/4;
+    grid-row: 6/7;
+}
