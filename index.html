@@ -14,25 +14,25 @@
     <div id="main-div">
         <div id="display">
             <section id="output"></section>
-            <section id="input"></section>
+            <section id="input">0</section>
         </div>
-        <button id="clear" class="button" onclick="">AC</button>
-        <button id="divide" class="button" onclick="">/</button>
-        <button id="multiply" class="button" onclick="">*</button>
-        <button id="seven" class="button" onclick="displayData(value)" value="7">7</button>
-        <button id="eight" class="button" onclick="displayData(value)" value="8">8</button>
-        <button id="nine" class="button" onclick="displayData(value)" value="9">9</button>
-        <button id="subtract" class="button" onclick="">-</button>
-        <button id="four" class="button" onclick="displayData(value)" value="4">4</button>
-        <button id="five" class="button" onclick="displayData(value)" value="5">5</button>
-        <button id="six" class="button" onclick="displayData(value)" value="6">6</button>
-        <button id="add" class="button" onclick="">+</button>
-        <button id="one" class="button" onclick="displayData(value)" value="1">1</button>
-        <button id="two" class="button" onclick="displayData(value)" value="2">2</button>
-        <button id="three" class="button" onclick="displayData(value)" value="3">3</button>
-        <button id="equals" class="button" onclick="">=</button>
-        <button id="zero" class="button" onclick="displayData(value)" value="0">0</button>
-        <button id="decimal" class="button" onclick="">.</button>
+        <button id="clear" class="button" onclick="clearInput()">AC</button>
+        <button id="divide" class="button" onclick="getFirstDivide()">/</button>
+        <button id="multiply" class="button" onclick="getFirstMultiply()">x</button>
+        <button id="seven" class="button" onclick="Num(value)" value="7">7</button>
+        <button id="eight" class="button" onclick="Num(value)" value="8">8</button>
+        <button id="nine" class="button" onclick="Num(value)" value="9">9</button>
+        <button id="subtract" class="button" onclick="getFirstMines()">-</button>
+        <button id="four" class="button" onclick="Num(value)" value="4">4</button>
+        <button id="five" class="button" onclick="Num(value)" value="5">5</button>
+        <button id="six" class="button" onclick="Num(value)" value="6">6</button>
+        <button id="add" class="button" onclick="getFirstplus()">+</button>
+        <button id="one" class="button" onclick="Num(value)" value="1">1</button>
+        <button id="two" class="button" onclick="Num(value)" value="2">2</button>
+        <button id="three" class="button" onclick="Num(value)" value="3">3</button>
+        <button id="equals" class="button" onclick="equall()">=</button>
+        <button id="zero" class="button" onclick="Num(value)" value="0">0</button>
+        <button id="decimal" class="button" onclick="Dot()">.</button>
     </div>
 </body>
 </html>
