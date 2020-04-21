@@ -65,7 +65,7 @@ function equall() {
     } else if (sign === 'Divide') {
         inputNumber = a / b;
     }
-    document.getElementById('input').innerText = inputNumber.toPrecision(7);
+    document.getElementById('input').innerText = inputNumber.toPrecision(5);
     document.getElementById('output').innerText += "=";
-    document.getElementById('output').innerText += inputNumber.toPrecision(7);
+    document.getElementById('output').innerText += inputNumber.toPrecision(5);
 }
