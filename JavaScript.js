@@ -2,6 +2,42 @@ var inputNumber ='';
 var a = '';
 var b = '';
 var sign= '';
+
+function keyPress() {
+    var x = event.which;
+    if(x === 49){
+        Num('1');
+    }else if(x === 50){
+        Num('2');
+    }else if(x === 51){
+        Num('3');
+    }else if(x === 52){
+        Num('4');
+    }else if(x === 53){
+        Num('5');
+    }else if(x === 54){
+        Num('6');
+    }else if(x === 55){
+        Num('7');
+    }else if(x === 56){
+        Num('8');
+    }else if(x === 57){
+        Num('9');
+    }else if(x === 48){
+        Num('0');
+    }else if(x === 47){
+        getFirstDivide();
+    }else if(x === 8){
+        clearInput();
+    }else if(x === 45){
+        getFirstMines();
+    }else if(x === 43){
+        getFirstplus();
+    }else if (x === 61){
+        equall();
+    }
+}
+
 function getFirstplus() {
     a = inputNumber;
     inputNumber ='0';

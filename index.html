@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="Style.css" type="text/css">
     <script type="text/javascript" src="JavaScript.js"></script>
 </head>
-<body>
+<body onkeypress="keyPress()">
     <div class="name">
         <h2>design and code by</h2>
         <p>Mahdi Bayat</p>
@@ -30,7 +30,7 @@
         <button id="two" class="button" onclick="Num(value)" value="2">2</button>
         <button id="three" class="button" onclick="Num(value)" value="3">3</button>
         <button id="equals" class="button" onclick="equall()">=</button>
-        <button id="zero" class="button" onclick="Num(value)" value="0">0</button>
+        <button id="zero" class="button" onclick="Num(value)" onkeypress="keyFind()" value="0">0</button>
         <button id="decimal" class="button" onclick="Dot()">.</button>
     </div>
 </body>
