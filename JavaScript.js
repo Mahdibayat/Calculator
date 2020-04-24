@@ -1,8 +1,7 @@
 var inputNumber ='';
-var a = '';
-var b = '';
-var sign= '';
-
+var subArr = [];
+var mainArr = [];
+var signArr = [];
 function keyPress() {
     var x = event.which;
     if(x === 49){
@@ -37,35 +36,6 @@ function keyPress() {
         equall();
     }
 }
-
-function getFirstplus() {
-    a = inputNumber;
-    inputNumber ='0';
-    document.getElementById('input').innerText = '0';
-    sign = 'Plus';
-    document.getElementById('output').innerText += '+';
-}
-function getFirstMines() {
-    a = inputNumber;
-    inputNumber = '0';
-    document.getElementById('input').innerText = '0';
-    sign = 'Mines';
-    document.getElementById('output').innerText += '-';
-}
-function getFirstDivide() {
-    a = inputNumber;
-    inputNumber = '0';
-    document.getElementById('input').innerText = '0';
-    sign = 'Divide';
-    document.getElementById('output').innerText += '\u00f7';
-}
-function getFirstMultiply() {
-    a = inputNumber;
-    inputNumber = '0';
-    document.getElementById('input').innerText = '0';
-    sign = 'Multiply';
-    document.getElementById('output').innerText += '\u00d7';
-}
 function Num(value) {
     if(document.getElementById('input').innerText === '0'){
     inputNumber = value;
@@ -74,34 +44,95 @@ function Num(value) {
     }
     document.getElementById('input').innerText = inputNumber;
     document.getElementById('output').innerText += value;
+    subArr.push(value);
+}
+
+function getFirstplus() {
+    mainArr.push(subArr);
+    subArr = [];
+    signArr.push('+');
+    inputNumber ='0';
+    document.getElementById('input').innerText = '0';
+    document.getElementById('output').innerText += '+';
+}
+function getFirstMines() {
+    if(subArr.length === 0){
+        Num('-');
+    }else {
+        mainArr.push(subArr);
+        subArr = [];
+        signArr.push('-');
+        inputNumber = '0';
+        document.getElementById('input').innerText = '0';
+        document.getElementById('output').innerText += '-';
+    }
+}
+function getFirstDivide() {
+    mainArr.push(subArr);
+    subArr = [];
+    signArr.push('/');
+    inputNumber = '0';
+    document.getElementById('input').innerText = '0';
+    document.getElementById('output').innerText += '\u00f7';
+}
+function getFirstMultiply() {
+    mainArr.push(subArr);
+    subArr = [];
+    signArr.push('*');
+    inputNumber = '0';
+    document.getElementById('input').innerText = '0';
+    document.getElementById('output').innerText += '\u00d7';
 }
 function clearInput() {
-    a = '0';
-    b = '0';
-    sign = '';
+    mainArr = [];
+    subArr = [];
+    signArr = [];
     inputNumber = '0';
     document.getElementById('input').innerText = inputNumber;
     document.getElementById('output').innerText = '';
 }
-function Dot(){
-    inputNumber += '.';
-    document.getElementById('input').innerText = inputNumber;
-    document.getElementById('output').innerText = inputNumber;
+function info() {
+    console.log(mainArr);
+    console.log(subArr);
+    console.log(signArr);
 }
 function equall() {
-    b = inputNumber;
-    a = parseFloat(a);
-    b = parseFloat(b);
-    if(sign === 'Plus'){
-        inputNumber = a + b;
-    } else if (sign === 'Mines') {
-        inputNumber = a - b;
-    } else if (sign === 'Multiply') {
-        inputNumber = a * b;
-    } else if (sign === 'Divide') {
-        inputNumber = a / b;
+    mainArr.push(subArr);
+    subArr = [];
+    var x = [];
+    var a = [];
+    for (var i = 0; i < mainArr.length; i++) {
+        var y = [];
+        for (var j = 0; j < mainArr[i].length; j++) {
+            y.push(mainArr[i][j]);
+        }
+        x.push(y.join(''));
     }
-    document.getElementById('input').innerText = inputNumber.toPrecision(5);
-    document.getElementById('output').innerText += "=";
-    document.getElementById('output').innerText += inputNumber.toPrecision(5);
+    for (var c = 0; c < x.length; c++) {
+        a.push(parseFloat(x[c]));
+    }
+    if(signArr.length === 1){
+        if (signArr[0] === '+'){
+            p = a[0]+a[1];
+            signArr=[];
+        }else if(signArr[0] === '-') {
+            p = a[0]-a[1];
+            signArr=[];
+        }else if(signArr[0] === '/') {
+            p = a[0]/a[1];
+            signArr=[];
+        }else if(signArr[0] === '*') {
+            p = a[0]*a[1];
+            signArr=[];
+        }
+        document.getElementById('output').innerText += '='+ p;
+        document.getElementById('input').innerText = p;
+    }else {
+        document.getElementById('output').innerText= 'plz calculate 1 by 1'
+    }
+    signArr=[];
+    mainArr=[];
+    subArr = [];
+    subArr.push(p.toString().split(''));
+    console.log(subArr);
 }

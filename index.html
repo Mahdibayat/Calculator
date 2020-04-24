@@ -11,7 +11,7 @@
         <p>Mahdi Bayat</p>
     </div>
     <div id="main-div">
-        <div id="display">
+        <div id="display" onclick="info()">
             <section id="output"></section>
             <section id="input">0</section>
         </div>
@@ -31,7 +31,7 @@
         <button id="three" class="button" onclick="Num(value)" value="3">3</button>
         <button id="equals" class="button" onclick="equall()">=</button>
         <button id="zero" class="button" onclick="Num(value)" onkeypress="keyFind()" value="0">0</button>
-        <button id="decimal" class="button" onclick="Dot()">.</button>
+        <button id="decimal" class="button" onclick="Num('.')">.</button>
     </div>
 </body>
 </html>
