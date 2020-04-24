@@ -127,8 +127,10 @@ function equall() {
         }
         document.getElementById('output').innerText += '='+ p;
         document.getElementById('input').innerText = p;
+    }else if (signArr.length === 0 ) {
+        document.getElementById('output').innerText= 'wrong input';
     }else {
-        document.getElementById('output').innerText= 'plz calculate 1 by 1'
+        document.getElementById('output').innerText = 'plz calculate 1 by 1';
     }
     signArr=[];
     mainArr=[];
